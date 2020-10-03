@@ -1,0 +1,48 @@
+.navbar {
+  color: #f5deb3;
+}
+.navbar .navbar-brand {
+  color: #f5deb3;
+  display: contents;
+}
+.navbar .navbar-menu {
+  color: #f5deb3;
+  max-width: 50%;
+}
+.navbar .navbar-item {
+  color: #f5deb3;
+  padding: 0.4rem;
+}
+.navbar .navbar-item.is-active {
+  color: #808080;
+}
+.white {
+  color: #f5deb3;
+}
+.book,
+.avi {
+  background-color: #060606;
+  min-height: 100vh;
+}
+.book .content,
+.avi .content {
+  font-family: "Jetbrains Mono", sans-serif;
+  color: #f5deb3;
+}
+.book .content p,
+.avi .content p {
+  text-indent: 20px;
+}
+.book .content h1,
+.avi .content h1,
+.book .content h2,
+.avi .content h2,
+.book .content h3,
+.avi .content h3 {
+  text-align: center;
+}
+.book .content .prev-next,
+.avi .content .prev-next {
+  display: flex;
+  justify-content: space-evenly;
+}

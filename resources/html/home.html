@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Атлантийский уголок</title>
+  </head>
+  <body>
+    
+    <div id="app">
+      <section class="section">
+        <div class="container is-fluid">
+          <div class="content">
+            <p> Ты отключил js? -_\ </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- scripts and styles -->
+    {% style "/assets/material-icons/css/material-icons.css" %}
+    {% style "/assets/bootstrap/css/bootstrap.css"%}
+    {% style "/css/screen.css" %}
+    {% style "/css/book.css" %}
+
+    {% script "/assets/jquery/jquery.slim.js" %}
+    {% script "/assets/popper.js/umd/popper.js" %}
+    {% script "/assets/bootstrap/js/bootstrap.js" %}
+
+    <script type="text/javascript">
+        var csrfToken = "{{csrf-token}}";
+    </script>
+    {% script "/js/app.js" %}
+  </body>
+</html>
