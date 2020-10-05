@@ -1,11 +1,13 @@
 (ns book-ll.core
   (:require
+    [reagent.core :as r]
     [kee-frame.core :as kf]
     [re-frame.core :as rf]
     [ajax.core :as http]
     [book-ll.ajax :as ajax]
     [book-ll.routing :as routing]
-    [book-ll.view :as view]))
+    [book-ll.view :as view]
+    [book-ll.test-events]))
 
 
 (rf/reg-event-fx
@@ -51,7 +53,7 @@
                   :on-failure      [:common/set-error]}
      :db (assoc db :book-n n)}
     )
-  (fn [{:keys [db]} [n b]]
+  (fn [{:keys [db]} [_ b]]
     {:db (assoc db :book b)}
     ))
 
@@ -62,6 +64,25 @@
                (-> route :path-params :id)))
    :start (fn [_ id] [::load-book id])
    })
+
+
+(def def-test-ctx {:cx 50 :cy 50 :radius 50 :fill "red" :colr {:r 10 :g 10 :b 10}})
+
+#_(kf/reg-chain
+  ::load-test-ctx
+  (fn [{:keys [db]} _]
+    {:db (assoc db :test-ctx (r/atom def-test-ctx))}
+    ))
+
+(rf/reg-sub
+  :test-ctx
+  (fn [db _]
+    (:test-ctx db)))
+
+(kf/reg-controller
+  ::test-controller
+  {:params (constantly true)
+   :start [:assoc-test-ctx def-test-ctx]})
 
 ;; -------------------------
 ;; Initialize app

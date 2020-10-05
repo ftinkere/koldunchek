@@ -51,7 +51,13 @@
                  [ring/ring-core "1.8.1"]
                  [ring/ring-defaults "0.3.2"]
                  [selmer "1.12.28"]
-                 [thheller/shadow-cljs "2.10.17" :scope "provided"]]
+                 [thheller/shadow-cljs "2.10.17" :scope "provided"]
+
+                 ;;[thi.ng/geom "0.0.908"]
+                 ;;
+                 ;;[org.jogamp.gluegen/gluegen-rt "2.3.2" :classifier "natives-linux-amd64"]
+                 ;;[org.jogamp.jogl/jogl-all "2.3.2" :classifier "natives-linux-amd64"]
+                 ]
 
   :min-lein-version "2.0.0"
   

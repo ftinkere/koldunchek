@@ -19,6 +19,10 @@
 .white {
   color: #f5deb3;
 }
+body {
+  background-color: #000;
+  color: #f5deb3;
+}
 .book,
 .avi {
   background-color: #060606;
@@ -45,4 +49,7 @@
 .avi .content .prev-next {
   display: flex;
   justify-content: space-evenly;
+}
+.tst {
+  margin-top: 50px;
 }

@@ -6,6 +6,7 @@
   [["/" :home]
    ["/about" :about]
    ["/book/:id" :book]
+   ["/test" :test]
    ])
 
 (rf/reg-sub
